@@ -74,7 +74,6 @@ class FlickrAPI {
                 photos = jsonDictionary["photos"] as? [String:AnyObject],
                 photosArray = photos["photo"] as? [[String:AnyObject]] else {
                     
-                    // The JSON structure doesn't match our expectations
                     return .Failure(FlickrError.InvalidJSONData)
             }
             
